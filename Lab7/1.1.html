@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>Доступ до властивостей і методів</TITLE>
+<SCRIPT>
+var flag1 = true, flag2 = true, flag3 = true;
+function changeColor1() {
+if (flag1) {
+document.getElementById("heading").style.color = "white";
+document.getElementById("heading").style.backgroundColor = "blue";
+flag1 = false;
+} else {
+document.getElementById("heading").style.color = "black";
+document.getElementById("heading").style.backgroundColor = "yellow";
+flag1 = true;
+}
+}
+function changeColor2() {
+if (flag2) {
+document.all.paragraph.style.color = "white";
+document.all.paragraph.style.backgroundColor = "green";
+flag2 = false;
+} else {
+document.all.paragraph.style.color = "red";
+document.all.paragraph.style.backgroundColor = "white";
+flag2 = true;
+}
+}
+function changeColor3() {
+if (flag3) {
+document.getElementById("div").style.color = "white";
+document.getElementById("div").style.backgroundColor = "blue";
+flag3 = false;
+} else {
+document.getElementById("div").style.color = "black";
+document.getElementById("div").style.backgroundColor = "yellow";
+flag3 = true;
+}
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<H2 id="heading" onclick="changeColor1()" style="background-color:yellow;">Доступ до властивостей і методів</H2>
+<P id="paragraph" onclick="changeColor2()" style="color:red;">Колекція all</P>
+<DIV id="div" onclick="changeColor3()" style="background-color:yellow;">Метод getElementById()</DIV>
+</BODY>
+</HTML>
